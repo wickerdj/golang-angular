@@ -4,7 +4,7 @@ Following [Golang & Angular Series - Part 1: Developing and Securing Golang APIs
 
 ## Progress
 
-ready to start 'Securing the Golang API with Auth0'
+Made the code changes for Part 1. Need to test.
 
 ## Notes
 
