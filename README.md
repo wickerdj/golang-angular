@@ -19,6 +19,21 @@ curl localhost:3000/todo -d '{"message": "finish writing the article"}'
 # get all to-do items
 curl localhost:3000/todo
 
+
+# From the Auth0 site
+## log in
+## Go to API
+## Find the test tab, copy the cURL command, the past into a terminal
+## copy the access token and set it to environment variable
+## So far I have only been able to get the API to return a 401 using the manual method
+
+ACCESS_TOKEN="ey...Gg"
+
+curl -H 'Authorization: Bearer '$ACCESS_TOKEN localhost:3000/todo -d '{"message": "finish writing the article"}'
+
+curl -H 'Authorization: Bearer '$ACCESS_TOKEN localhost:3000/todo
+
+
 ```
 
 ## Resource
