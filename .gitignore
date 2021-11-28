@@ -16,7 +16,6 @@
 # Dependency directories (remove the comment below to include it)
 # vendor/
 
-
 # Angular
 .DS_STORE
 
@@ -75,4 +74,4 @@ baseline.json
 
 
 # Angular Environment
-/**/src/environments/**
+/ui/src/environments/**
