@@ -3,13 +3,13 @@ module wickerdj/angular-golang-auth0-example
 go 1.17
 
 require (
+	github.com/auth0-community/go-auth0 v1.0.0
 	github.com/gin-gonic/gin v1.7.7
-	github.com/rs/cors v1.8.0
 	github.com/rs/xid v1.3.0
+	gopkg.in/square/go-jose.v2 v2.6.0
 )
 
 require (
-	github.com/auth0-community/go-auth0 v1.0.0 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
@@ -25,6 +25,5 @@ require (
 	golang.org/x/sys v0.0.0-20210806184541-e5e7981a1069 // indirect
 	golang.org/x/text v0.3.6 // indirect
 	google.golang.org/protobuf v1.27.1 // indirect
-	gopkg.in/square/go-jose.v2 v2.6.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
