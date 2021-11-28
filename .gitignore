@@ -75,4 +75,4 @@ baseline.json
 
 
 # Angular Environment
-/environments/**
+**/environments/**
