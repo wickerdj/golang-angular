@@ -74,4 +74,5 @@ baseline.json
 
 
 # Angular Environment
-/ui/src/environments/
+ui/src/environments/environment.ts
+ui/src/environments/environment.prod.ts
