@@ -10,6 +10,13 @@ Made the code changes for Part 1. Need to test.
 
 ## Notes
 
+Getting git to ignore the files environment.ts and environment.prod.ts was more diffcult that I expected. The files were originally setup to be tracked. Once git starts tracking a file changing .gitingore for the file doesn't work. I needed to use the command `git update-index`.
+
+``` shell
+git update-index --skip-worktree ui/src/environments/environment.ts
+git update-index --skip-worktree ui/src/environments/environment/prod.ts
+```
+
 ## Manual testing
 
 ``` shell
