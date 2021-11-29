@@ -4,13 +4,13 @@ import { TodoService, Todo } from '../todo.service';
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css']
+  styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
 
-  activeTodos: Todo[];
-  completedTodos: Todo[];
-  todoMessage: string;
+  activeTodos: Todo[] = [];
+  completedTodos: Todo[] = [];
+  todoMessage: string ='';
 
   constructor(private todoService: TodoService) { }
 
@@ -19,9 +19,9 @@ export class TodoComponent implements OnInit {
   }
 
   getAll() {
-    this.todoService.getTodoList().subscribe((data: Todo[]) => {
-      this.activeTodos = data.filter((a) => !a.complete);
-      this.completedTodos = data.filter((a) => a.complete);
+    this.todoService.getTodoList().subscribe((data: any) => {
+      this.activeTodos = data.filter((a: any) => !a.complete);
+      this.completedTodos = data.filter((a: any) => a.complete);
     });
   }
 

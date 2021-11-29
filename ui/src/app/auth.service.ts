@@ -10,9 +10,9 @@ import * as auth0 from 'auth0-js';
 export class AuthService {
   constructor(public router: Router)  {}
 
-  access_token: string;
-  id_token: string;
-  expires_at: string;
+  access_token: string = '';
+  id_token: string = '';
+  expires_at: string = '';
 
   auth0 = new auth0.WebAuth({
     clientID: environment.clientId,
@@ -38,7 +38,7 @@ export class AuthService {
     });
   }
 
-  private setSession(authResult): void {
+  private setSession(authResult: any): void {
     // Set the time that the Access Token will expire at
     const expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime());
     this.access_token = authResult.accessToken;
@@ -47,9 +47,9 @@ export class AuthService {
   }
 
   public logout(): void {
-    this.access_token = null;
-    this.id_token = null;
-    this.expires_at = null;
+    this.access_token = '';
+    this.id_token = '';
+    this.expires_at = '';
     // Go back to the home route
     this.router.navigate(['/']);
   }
