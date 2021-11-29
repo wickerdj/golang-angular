@@ -6,7 +6,7 @@ Following [Golang & Angular Series - Part 1: Developing and Securing Golang APIs
 
 ## Progress
 
-Made the code changes for Part 1. Need to test.
+Made it most of the way through part 2. Testing and debugging
 
 ## Notes
 
@@ -17,30 +17,21 @@ git update-index --skip-worktree ui/src/environments/environment.ts
 git update-index --skip-worktree ui/src/environments/environment/prod.ts
 ```
 
-## Manual testing
+## Starting the apps
 
-``` shell
-# add a new to-do item
-curl localhost:3000/todo -d '{"message": "finish writing the article"}'
+for the API set the environment variables then run the app
 
-# get all to-do items
-curl localhost:3000/todo
+```shell
+export AUTH0_API_IDENTIFIER=<YOUR_AUTH0_API>
+export AUTH0_DOMAIN=<YOUR_AUTH0_TENANT>.auth0.com
 
+go run main.go
+```
 
-# From the Auth0 site
-## log in
-## Go to API
-## Find the test tab, copy the cURL command, the past into a terminal
-## copy the access token and set it to environment variable
-## So far I have only been able to get the API to return a 401 using the manual method
+for the ui
 
-ACCESS_TOKEN="ey...Gg"
-
-curl -H 'Authorization: Bearer '$ACCESS_TOKEN localhost:3000/todo -d '{"message": "finish writing the article"}'
-
-curl -H 'Authorization: Bearer '$ACCESS_TOKEN localhost:3000/todo
-
-
+```shell
+ng serve
 ```
 
 ## Resource
